@@ -5,10 +5,16 @@ using UnityEngine;
 public class Unit : MonoBehaviour
 {
     [SerializeField] private Animator unitAnimator;
+    private GridPosition gridPosition;
     private Vector3 targetPosition;
     private void Awake()
     {
         targetPosition = transform.position;
+    }
+    private void Start()
+    {
+        gridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
+        LevelGrid.Instance.AddUnitatGridPosition(gridPosition, this);
     }
     private void Update()
     {
@@ -25,6 +31,12 @@ public class Unit : MonoBehaviour
         else
         {
             unitAnimator.SetBool("isWalking", false);
+        }
+        GridPosition newGridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
+        if (newGridPosition != gridPosition)
+        {
+            LevelGrid.Instance.UnitMovedGridPosition(this, gridPosition, newGridPosition);
+            gridPosition = newGridPosition;
         }
     }
     public void Move(Vector3 targetPosition)
