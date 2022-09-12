@@ -12,7 +12,7 @@ public class LevelGrid : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.Log("UnitActionSystem error: " + transform + "-" + Instance);
+            Debug.Log("LevelGrid error: " + transform + "-" + Instance);
             Destroy(gameObject);
             return;
         }

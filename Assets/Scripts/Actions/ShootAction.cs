@@ -59,7 +59,7 @@ public class ShootAction : BaseAction
             targetUnit = targetUnit,
             shootingUnit = unit
         });
-        targetUnit.Damage();
+        targetUnit.Damage(40);
     }
 
     private void NextState()
@@ -80,14 +80,12 @@ public class ShootAction : BaseAction
                 ActionComplete();
                 break;
         }
-        Debug.Log(state);
 
     }
     public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
     {
         ActionStart(onActionComplete);
         targetUnit = LevelGrid.Instance.GetUnitAtGridPosition(gridPosition);
-        Debug.Log("aiming");
         state = State.Aiming;
         float aimingStateTime = 1f;
         stateTimer = aimingStateTime;
