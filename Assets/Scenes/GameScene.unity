@@ -186,6 +186,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -687779369912199601, guid: fb5931280662b5f4bbef2b862a9e73ab,
+        type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5991011981725902800, guid: fb5931280662b5f4bbef2b862a9e73ab,
         type: 3}
       propertyPath: m_RootOrder
@@ -2979,7 +2984,7 @@ PrefabInstance:
     - target: {fileID: 4376815214469162299, guid: 8a2a96bf383d6d441a5955ecc0841a64,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.98
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4376815214469162299, guid: 8a2a96bf383d6d441a5955ecc0841a64,
         type: 3}
@@ -2989,7 +2994,7 @@ PrefabInstance:
     - target: {fileID: 4376815214469162299, guid: 8a2a96bf383d6d441a5955ecc0841a64,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4376815214469162299, guid: 8a2a96bf383d6d441a5955ecc0841a64,
         type: 3}
@@ -3081,7 +3086,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0334263, y: 1}
+    m_SensorSize: {x: 2.1779754, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
