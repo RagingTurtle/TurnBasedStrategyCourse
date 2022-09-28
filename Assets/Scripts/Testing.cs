@@ -8,6 +8,7 @@ public class Testing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
+            ScreenShake.Instance.Shake(5f);
         }
     }
 }
